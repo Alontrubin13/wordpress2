@@ -16,6 +16,17 @@ module "main" {
   HTTP          = 80
   HTTPS         = 443
   SSH           = 22
+  db_port = 3306
+  rds_sg_name = "rds-sg"
+  db_storage = 20
+  db_name = "wordpress"
+  db_engine = "mysql"
+  db_engine_version = "5.7"
+  db_instance_class = "db.t2.micro"
+  db_username = "admin"
+  db_password = "adminadmin"
+  storage_type = "gp2"
+
 }
 
 # module sg {
