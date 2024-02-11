@@ -1,1 +1,3 @@
 .terraform
+root/terraform.tfstate
+root/terraform.tfstate.backup
