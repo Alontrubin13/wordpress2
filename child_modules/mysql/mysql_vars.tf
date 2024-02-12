@@ -30,6 +30,17 @@ variable storage_type {
   type        = string
 }
 
+variable "private_subnet_ids" {
+  type    = list(string)
+  description = "List of private subnet IDs"
+}
+
+variable rds_sg {
+  type        = list(string)
+}
+
+
+
 
 
 

@@ -18,5 +18,15 @@ variable instance_name {
   type        = string
 }
 
+variable sg_id {
+  type        = list(string)
+}
+
+variable public_subnet_id {
+  type        = string
+}
+
+
+
 
 

@@ -11,10 +11,10 @@ resource "aws_db_instance" "default" {
   parameter_group_name = "default.mysql5.7"
   skip_final_snapshot  = true
   db_subnet_group_name = aws_db_subnet_group.private_subnet.name
-  vpc_security_group_ids = [aws_security_group.rds-sg.id]
+  vpc_security_group_ids = var.rds_sg
 }
 
 resource "aws_db_subnet_group" "private_subnet" {
   name       = "private_subnet"
-  subnet_ids = values(aws_subnet.private_subnet)[*].id
+  subnet_ids = var.private_subnet_ids
 }

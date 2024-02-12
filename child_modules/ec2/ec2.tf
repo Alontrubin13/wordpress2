@@ -6,9 +6,9 @@ resource "aws_key_pair" "ssh-key" {
 resource "aws_instance" "wordpress-ec2" {
   ami           = var.ami
   instance_type = var.instance_type
-  vpc_security_group_ids = [aws_security_group.wordpress-sg.id]
+  vpc_security_group_ids = var.sg_id
   key_name = var.key_name
-  subnet_id  = aws_subnet.public_subnet["us-east-1a"].id
+  subnet_id  = var.public_subnet_id
   associate_public_ip_address = true
   
   tags = {
